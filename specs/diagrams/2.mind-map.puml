@@ -1,0 +1,91 @@
+@startmindmap Andexor Grass Spider (AGS) - Get Domain Registration Data - Mind Map
+
+' SPDX-License-Identifier: Apache-2.0
+' Copyright 2026 Andexor Network, Inc.
+' Author: Ed Jenkins<ed@andexor.net>
+
+title Andexor Grass Spider (AGS)\nGet Domain Registration Data\nMind Map
+
+' Colors defined by Andexor Network Design System
+
+!$ANDEXOR_BLUE_50  = "#F3F7FC"
+!$ANDEXOR_BLUE_100 = "#E7EFF8"
+!$ANDEXOR_BLUE_200 = "#C5D8EF"
+!$ANDEXOR_BLUE_300 = "#8FB6E2"
+!$ANDEXOR_BLUE_400 = "#4A8BD0"
+!$ANDEXOR_BLUE_500 = "#1A5FA8"
+
+!$OLD_GOLD_300 = "#F8D066"
+!$OLD_GOLD_500 = "#EAAA00"
+
+<style>
+
+root {
+    BackgroundColor $ANDEXOR_BLUE_200
+    HorizontalAlignment center
+    LineColor $ANDEXOR_BLUE_400
+    LineThickness 4
+    Margin 20
+    RoundCorner 20
+    Shadowing 1
+}
+
+title {
+    BackgroundColor $ANDEXOR_BLUE_500
+    FontColor $ANDEXOR_BLUE_50
+    Margin 20
+    Padding 20
+}
+
+arrow {
+    LineColor $ANDEXOR_BLUE_400
+}
+
+mindmapDiagram {
+
+    .internal-agent {
+        BackgroundColor $ANDEXOR_BLUE_300
+        LineColor $ANDEXOR_BLUE_400
+    }
+
+    .internal-service {
+        BackgroundColor $ANDEXOR_BLUE_400
+        LineColor $ANDEXOR_BLUE_500
+    }
+
+    .external-service {
+        BackgroundColor $ANDEXOR_BLUE_500
+        FontColor $ANDEXOR_BLUE_50
+        LineColor $ANDEXOR_BLUE_400
+    }
+
+}
+
+</style>
+
+*:**AGS RDAP Agent**
+----
+Find the RDAP Server for
+the domain and query it; <<internal-agent>>
+
+**:**AGS RDAP Bootstrap Service**
+----
+Query the RDAP Bootstrap Server to find the
+RDAP Authoritative Server for the domain; <<internal-service>>
+
+**:**AGS RDAP Authoritative Service**
+----
+Query the RDAP Authoritative Server
+for Domain Registration Data; <<internal-service>>
+
+*:**External RDAP Bootstrap Server**
+----
+Locate the domain's
+RDAP Authoritative Server; <<external-service>>
+
+**:**External RDAP Authoritative Server**
+----
+Retrieve the
+Domain Registration Data; <<external-service>>
+
+@endmindmap

@@ -1,3 +1,3 @@
-# Andexor Base Template
+# Andexor Grass Spider RDAP Bootstrap Service
 
-This project is the skeleton of all other projects created by Andexor Network, Inc, providing starter files necessary for licensing, attribution, etc.
+Queries the RDAP bootstrap service for a referral to another RDAP service
