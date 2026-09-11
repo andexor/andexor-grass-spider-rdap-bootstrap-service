@@ -42,7 +42,6 @@ title {
 arrow {
     FontColor $ANDEXOR_BLUE_500
     FontStyle bold
-    LineColor $ANDEXOR_BLUE_400
 }
 
 actor {
