@@ -1,4 +1,4 @@
-@startwbs Andexor Grass Spider (AGS) - Get Domain Registration Data - Work Breakdown Structure
+@startwbs 3.wbs
 
 ' SPDX-License-Identifier: Apache-2.0
 ' Copyright 2026 Andexor Network, Inc.
@@ -18,12 +18,13 @@ title Andexor Grass Spider (AGS)\nGet Domain Registration Data\nWork Breakdown S
 !$OLD_GOLD_300 = "#F8D066"
 !$OLD_GOLD_500 = "#EAAA00"
 
+skinparam dpi 300
+
 <style>
 
 root {
     BackgroundColor $ANDEXOR_BLUE_200
-    HorizontalAlignment center
-    LineColor $ANDEXOR_BLUE_400
+    LineColor $ANDEXOR_BLUE_500
     LineThickness 4
     Margin 20
     RoundCorner 20
@@ -33,25 +34,20 @@ root {
 title {
     BackgroundColor $ANDEXOR_BLUE_500
     FontColor $ANDEXOR_BLUE_50
+    LineColor $ANDEXOR_BLUE_400
     Margin 20
     Padding 20
 }
 
 wbsDiagram {
 
-    .system {
-        BackgroundColor $OLD_GOLD_500
-        LineColor $OLD_GOLD_300
-    }
-
     .internal-agent {
         BackgroundColor $ANDEXOR_BLUE_300
-        LineColor $ANDEXOR_BLUE_400
+        BackgroundColor $OLD_GOLD_500
     }
 
     .internal-service {
         BackgroundColor $ANDEXOR_BLUE_400
-        LineColor $ANDEXOR_BLUE_500
     }
 
     .external-service {
@@ -62,36 +58,39 @@ wbsDiagram {
 
 }
 
+footer {
+    FontColor $ANDEXOR_BLUE_500
+    FontStyle bold
+    LineColor $ANDEXOR_BLUE_200
+}
+
 </style>
 
-*:**Andexor Grass Spider**
-----
-Get Domain Registration Data
-for a given domain name; <<system>>
-
-**:**AGS RDAP Agent**
+*:**AGS RDAP Agent**
 ----
 Find the RDAP Server for
 the domain and query it; <<internal-agent>>
 
-***:**AGS RDAP Bootstrap Service**
+**:**AGS RDAP Bootstrap Service**
 ----
 Query the RDAP Bootstrap Server to find the
 RDAP Authoritative Server for the domain; <<internal-service>>
 
-****:**External RDAP Bootstrap Server**
+***<:**External RDAP Bootstrap Server**
 ----
 Locate the domain's
 RDAP Authoritative Server; <<external-service>>
 
-***:**AGS RDAP Authoritative Service**
+**:**AGS RDAP Authoritative Service**
 ----
 Query the RDAP Authoritative Server
 for Domain Registration Data; <<internal-service>>
 
-****:**External RDAP Authoritative Server**
+***:**External RDAP Authoritative Server**
 ----
 Retrieve the
 Domain Registration Data; <<external-service>>
+
+footer Copyright 2026 Andexor Network, Inc.
 
 @endwbs
