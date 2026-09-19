@@ -6,8 +6,6 @@
 
 title Andexor Grass Spider (AGS)\nGet Domain Registration Data\nUse Cases
 
-skinparam actorStyle awesome
-
 ' Colors defined by Andexor Network Design System
 
 !$ANDEXOR_BLUE_50  = "#F3F7FC"
@@ -21,6 +19,7 @@ skinparam actorStyle awesome
 !$OLD_GOLD_500 = "#EAAA00"
 
 hide stereotype
+skinparam actorStyle awesome
 skinparam dpi 300
 
 <style>
