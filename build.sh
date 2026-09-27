@@ -5,7 +5,8 @@
 # Author: Ed Jenkins<ed@andexor.net>
 
 # variables
-IMAGE=andexor/andexor-grass-spider-rdap-bootstrap-service
+APP=$(basename "$PWD")
+IMAGE=andexor/${APP}
 VERSION=1
 
 # See if there is an existing image.
