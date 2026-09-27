@@ -1,27 +1,31 @@
 [project]
 name = "andexor-grass-spider-rdap-bootstrap-service"
 version = "1.0.0"
-description = "Checks to see if a domain name is registered and retrieves its registration data"
+description = "Queries the RDAP bootstrap service for a referral to another RDAP service"
 readme = "README.md"
 authors = [
     { name = "Ed Jenkins", email = "ed@andexor.net" }
 ]
 requires-python = ">=3.14"
 dependencies = [
+    "a2wsgi>=1.10.10",
+    "fastapi[standard]>=0.141.1",
     "httpx[http2]>=0.28.1",
     "pip-licenses>=5.5.5",
+    "uvicorn[standard]>=0.53.0",
     "whodap>=0.1.16",
+    "zttp>=0.0.34",
 ]
 license = 'Apache-2.0'
 license-files = ['LICENSE']
 keywords = ["Andexor", "Grass Spider", "SEO", "domain"]
 
 [project.scripts]
-andexor-grass-spider-rdap-bootstrap-service = "andexor_grass_spider_rdap_bootstrap_service:main"
+andexor-grass-spider-rdap-bootstrap-service = "app.main:app"
 
 [project.urls]
 homepage = "https://andexor.net"
-documentation = "https://andexor.net"
+documentation = "https://andexor.net/"
 source = "https://github.com/andexor/andexor-grass-spider-rdap-bootstrap-service"
 issues = "https://github.com/andexor/andexor-grass-spider-rdap-bootstrap-service/issues"
 
@@ -31,3 +35,6 @@ build-backend = "uv_build"
 
 [tool.uv]
 exclude-newer = "1 week"
+
+[tool.fastapi]
+entrypoint = "app.main:app"
