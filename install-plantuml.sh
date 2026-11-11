@@ -13,6 +13,6 @@
 # Then be sure to update plantuml.sh and VS Code to match.
 
 mkdir -p .tools
-PLANTUML_VERSION=1.2026.8
+PLANTUML_VERSION=1.2026.9
 
 curl -L -o ./.tools/plantuml-mit-${PLANTUML_VERSION}.jar "https://github.com/plantuml/plantuml/releases/download/v${PLANTUML_VERSION}/plantuml-mit-${PLANTUML_VERSION}.jar"
