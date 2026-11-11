@@ -4,7 +4,7 @@
 # Copyright 2026 Andexor Network, Inc.
 # Author: Ed Jenkins<ed@andexor.net>
 
-PLANTUML_VERSION=1.2026.8
+PLANTUML_VERSION=1.2026.9
 
 rm -r -f dist/uml
 mkdir -p dist/uml/images

@@ -24,13 +24,13 @@ uv --quiet add "a2wsgi"
 mkdir -p reports
 uv --quiet add pip-licenses
 uv --quiet sync
-echo " " >> reports/license-report.txt
+echo " " > reports/license-report.txt
 date --iso-8601 seconds >> reports/license-report.txt
 echo " " >> reports/license-report.txt
 uv run pip-licenses --format=markdown >> reports/license-report.txt
 
 # Check for known vulnerabilities in dependencies.
-echo " " >> reports/uv-audit-report.txt
+echo " " > reports/uv-audit-report.txt
 date --iso-8601 seconds >> reports/uv-audit-report.txt
 echo " " >> reports/uv-audit-report.txt
 uv --preview-features audit-command audit 2>> reports/uv-audit-report.txt
